@@ -118,6 +118,7 @@ owners **are** the bridge nodes, so both branches collapse to the **same 5 keys*
 | [`docs/07_deposit_history_evidence.md`](docs/07_deposit_history_evidence.md) | No-premine proof, upgrade history, deposit-amount distribution |
 | [`docs/08_integrity_checks.md`](docs/08_integrity_checks.md) | OZ byte-diff vs npm v5.5.0, Safe/pool/USDC canonical verification |
 | [`docs/09_exploit_review.md`](docs/09_exploit_review.md) | **Exploitation audit** — properties, adversarial review of every bespoke path, killed candidates |
+| [`docs/10_entrypoint_coverage.md`](docs/10_entrypoint_coverage.md) | **Complete entry-point enumeration** — every external/public function, its guard, one-line reason not exploitable |
 | [`UNRESOLVED.md`](UNRESOLVED.md) | **Everything that could not be followed on-chain** — read this |
 
 ### Data & tools
