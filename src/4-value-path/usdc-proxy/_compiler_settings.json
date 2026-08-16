@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 10000000
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    }
+  },
+  "compiler": "v0.6.12+commit.27d51765",
+  "evmVersion": "istanbul",
+  "optimizer": "1",
+  "runs": "10000000"
+}

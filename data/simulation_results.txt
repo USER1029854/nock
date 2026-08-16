@@ -1,0 +1,38 @@
+==============================================================================
+UNPRIVILEGED-CALLER SIMULATION  (from 0x00000000000000000000000000000000deadBeef )
+block 50030541
+==============================================================================
+
+-- Target Nock: mint / burn / admin --
+  [REVERTS]  Nock.mint(attacker, 1e21)  [attempt to mint out of thin air]
+             -> Error: Only inbox can mint
+  [REVERTS]  Nock.updateInbox(attacker) [attempt to seize mint authority]
+             -> custom/selector 0x118cdaa7
+  [REVERTS]  Nock.burn(1e21, 0x..) [burn tokens attacker does not hold]
+             -> Error: Insufficient balance
+
+-- MessageInbox: the mint path & admin --
+  [REVERTS]  MessageInbox.submitDeposit(...,3 forged sigs) [MINT PATH from attacker]
+             -> Error: Invalid signature
+  [REVERTS]  MessageInbox.updateBridgeNode(0, attacker) [swap in attacker signer]
+             -> custom/selector 0x118cdaa7
+  [REVERTS]  MessageInbox.setWithdrawalsEnabled(false) [brick withdrawals]
+             -> custom/selector 0x118cdaa7
+  [REVERTS]  MessageInbox.upgradeToAndCall(attacker, 0x) [replace mint logic]
+             -> custom/selector 0x118cdaa7
+  [REVERTS]  MessageInbox.notifyBurn() [spoof a burn notification, not from Nock]
+             -> Error: Only Nock contract can notify burns
+
+-- Pool: swap reachability (normal user action, should be OPEN) --
+  [REACHED]  Pool.skim(attacker) [permissionless housekeeping - expect reachable/no-op]
+             -> returns 0x
+
+-- Safe admin (3-of-5) --
+  [REVERTS]  Safe.execTransaction(attacker,0,0x,...,emptySigs) [admin action w/o quorum]
+             -> execution reverted
+reconstructed messageHash = 0x2826f33df2743b170a035cc68c770e5354c549be29fa279a15e2c125b7e49749
+  signer0 = 0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1 (NOT a bridge node)  v=27
+  signer1 = 0x5050A4F4b3f9338C3472dcC01A87C76A144b3c9c (NOT a bridge node)  v=28
+  signer2 = 0x3325a78425F17a7E487Eb5666b2bFd93aBb06c70 (NOT a bridge node)  v=28
+
+submitDeposit(3 valid non-node sigs) from attacker -> REVERTS: Error: Invalid Ethereum signatures

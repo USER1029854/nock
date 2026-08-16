@@ -1,0 +1,16 @@
+AUTHORITY-CHANGE EVENT HISTORY (full range, via Blockscout server-side getLogs)
+==============================================================================
+Nock InboxUpdated(old,new) events, all-time:  1
+  block 39685415  old=0x0000000000000000000000000000000000000000  new=0x2033e72869c729b5a10f9c0a9d087c8297518021 (MessageInbox proxy)
+
+Inbox proxy Upgraded(impl) events, all-time:  1
+  block 39685413  impl=0xcf6900c9fef4b3723856703e90a61d63a28dbe99 (current MessageInbox impl; constructor)
+
+=> inbox was address(0) until block 39685415 (mint impossible); then the MessageInbox proxy, forever.
+=> proxy implementation set once at construction to the current impl; NEVER upgraded.
+=> Conclusion: no premine, no alternate mint path, no swapped implementation.
+
+DEPOSIT USAGE (DepositProcessed):
+  lastDepositNonce = 462 ; sampled 447 events ; sum ~1,242,956,127 NOCK
+  max single deposit ~52,343,788 NOCK -> 0xE61894033Eec8CE33862F8c6B8C1aeC56FD386e8 ; 181 distinct recipients
+  live totalSupply ~1,315,153,008 NOCK

@@ -1,0 +1,79 @@
+[
+  {
+    "label": "Nock (target token)",
+    "address": "0x9b5e262cf9bb04869ab40b19af91d2dc85761722",
+    "path": "src/1-target/nock",
+    "contract": "Nock",
+    "files": 7
+  },
+  {
+    "label": "MessageInbox (impl / mint logic)",
+    "address": "0xcf6900c9fef4b3723856703e90a61d63a28dbe99",
+    "path": "src/2-mint-authority/message-inbox-impl",
+    "contract": "MessageInbox",
+    "files": 22
+  },
+  {
+    "label": "ERC1967Proxy (inbox shell)",
+    "address": "0x2033e72869c729b5a10f9c0a9d087c8297518021",
+    "path": "src/2-mint-authority/inbox-proxy-erc1967",
+    "contract": "ERC1967Proxy",
+    "files": 9
+  },
+  {
+    "label": "SafeProxy (Nock+Inbox owner)",
+    "address": "0xdc373766c03c645f04695224527ba7ef61fd4288",
+    "path": "src/3-admin-owner/owner-safe-proxy",
+    "contract": "SafeProxy",
+    "files": 1
+  },
+  {
+    "label": "SafeL2 v1.4.1 singleton",
+    "address": "0x29fcb43b46531bca003ddc8fcb67ffe91900c762",
+    "path": "src/3-admin-owner/safe-l2-singleton",
+    "contract": "SafeL2",
+    "files": 17
+  },
+  {
+    "label": "CompatibilityFallbackHandler",
+    "address": "0xfd0732dc9e303f09fcef3a7388ad10a83459ec99",
+    "path": "src/3-admin-owner/safe-fallback-handler",
+    "contract": "CompatibilityFallbackHandler",
+    "files": 21
+  },
+  {
+    "label": "Aerodrome Pool (impl of clone)",
+    "address": "0xa4e46b4f701c62e14df11b48dce76a7d793cd6d7",
+    "path": "src/4-value-path/aerodrome-pool-impl",
+    "contract": "Pool",
+    "files": 1
+  },
+  {
+    "label": "Aerodrome PoolFactory",
+    "address": "0x420dd381b31aef6683db6b902084cb0ffece40da",
+    "path": "src/4-value-path/aerodrome-pool-factory",
+    "contract": "PoolFactory",
+    "files": 1
+  },
+  {
+    "label": "USDC FiatTokenProxy",
+    "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "path": "src/4-value-path/usdc-proxy",
+    "contract": "FiatTokenProxy",
+    "files": 5
+  },
+  {
+    "label": "USDC FiatTokenV2_2 (impl)",
+    "address": "0x2ce6311ddae708829bc0784c967b7d77d19fd779",
+    "path": "src/4-value-path/usdc-impl",
+    "contract": "FiatTokenV2_2",
+    "files": 23
+  },
+  {
+    "label": "V2Locker (holds 49.7% pool LP)",
+    "address": "0x11bc9051a4ee340fd182a6ca72d18ec93d92e60d",
+    "path": "src/4-value-path/v2-locker",
+    "contract": "V2Locker",
+    "files": 23
+  }
+]

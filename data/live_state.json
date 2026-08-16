@@ -1,0 +1,95 @@
+{
+  "network": "Base (chainid 8453)",
+  "snapshot_block": 50030989,
+  "snapshot_utc": "resolved at build time; block 50030989",
+  "target_nock": {
+    "address": "0x9b5e262cf9bb04869ab40b19af91d2dc85761722",
+    "verified": true,
+    "decimals": 16,
+    "totalSupply_raw": 13151530078255920410156250,
+    "totalSupply_NOCK": 1315153007.825592,
+    "inbox_live": "0x2033e72869c729b5a10f9c0a9d087c8297518021",
+    "owner_live": "0xdc373766c03c645f04695224527ba7ef61fd4288"
+  },
+  "message_inbox": {
+    "proxy": "0x2033e72869c729b5a10f9c0a9d087c8297518021",
+    "proxy_type": "ERC1967 UUPS",
+    "implementation_live_slot": "0xcf6900c9fef4b3723856703e90a61d63a28dbe99",
+    "implementation_etherscan": "0xcf6900c9fef4b3723856703e90a61d63a28dbe99",
+    "admin_slot": "0x0 (UUPS: upgrade auth in impl logic)",
+    "owner_live": "0xdc373766c03c645f04695224527ba7ef61fd4288",
+    "nock_live": "0x9b5e262cf9bb04869ab40b19af91d2dc85761722",
+    "withdrawalsEnabled": true,
+    "lastDepositNonce": 462,
+    "THRESHOLD": 3,
+    "bridgeNodes": [
+      "0x091f5a663dba081547d60bf0aa50d0a56f1e0964",
+      "0xcadeeee25c168b8cf054f290f97dbf568a853f64",
+      "0x79a2740620d989d51e08f0de494f520e95e5b9cb",
+      "0xddde747a20b17ea13f4c4eeb77615b1f18ca0b3b",
+      "0xf0441e68e994c20c998e54a23f0d40b76185be76"
+    ]
+  },
+  "owner_safe": {
+    "address": "0xdc373766c03c645f04695224527ba7ef61fd4288",
+    "type": "Gnosis Safe v1.4.1 (SafeL2)",
+    "singleton": "0x29fcb43b46531bca003ddc8fcb67ffe91900c762",
+    "threshold": 3,
+    "owners": [
+      "0x091f5a663dba081547d60bf0aa50d0a56f1e0964",
+      "0xcadeeee25c168b8cf054f290f97dbf568a853f64",
+      "0x79a2740620d989d51e08f0de494f520e95e5b9cb",
+      "0xddde747a20b17ea13f4c4eeb77615b1f18ca0b3b",
+      "0xf0441e68e994c20c998e54a23f0d40b76185be76"
+    ],
+    "nonce": 1,
+    "modules": "none (getModulesPaginated empty)",
+    "guard": "0x0 (none)",
+    "fallbackHandler": "0xfd0732dc9e303f09fcef3a7388ad10a83459ec99"
+  },
+  "aerodrome_pool": {
+    "address": "0x85f1aa3a70fedd1c52705c15baed143e675cd626",
+    "type": "Aerodrome volatile pool (EIP-1167 clone)",
+    "clone_implementation": "0xa4e46b4f701c62e14df11b48dce76a7d793cd6d7",
+    "factory": "0x420dd381b31aef6683db6b902084cb0ffece40da",
+    "token0_USDC": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token1_NOCK": "0x9b5e262cf9bb04869ab40b19af91d2dc85761722",
+    "stable": false,
+    "reserve_USDC": 315623.857909,
+    "reserve_NOCK": 31742168.63518265,
+    "LP_totalSupply": 0.3163406974511529,
+    "gauge": "0x4cbb6188c6101cacd4eb1126cc14882bd93dc3db (killed, isAlive=false)"
+  },
+  "value_at_risk": {
+    "drainable_USDC_in_pool": 315623.857909,
+    "note": "USDC reserve is the realizable value an unlimited-mint would extract via swap"
+  },
+  "lp_ownership": {
+    "v2locker_instance": {
+      "address": "0x876B24D12608807AB76878b6CDCd4dD896BC2E48",
+      "impl": "0x11bc9051a4ee340fd182a6ca72d18ec93d92e60d",
+      "owner": "0xb51ae43a65bb89c441c6ec51a3e9f0a164fff294",
+      "lockedUntil": 1782165159,
+      "lockedUntil_utc": "2026-06-22T21:52:39Z",
+      "LP_share_pct": 49.63
+    },
+    "second_holder_7702": {
+      "address": "0x078C1D2b27f1B7a0A22d68b5645D2f1E642ed4c9",
+      "type": "EIP-7702 delegated EOA (MetaMask DeleGator)",
+      "LP_share_pct": 28.9
+    },
+    "third_holder_eoa": {
+      "address": "0xdeb95D65886E86A04cBAF8655906698ca32541a2",
+      "type": "EOA",
+      "LP_share_pct": 16.3
+    }
+  },
+  "history_facts": {
+    "InboxUpdated_events_total": 1,
+    "InboxUpdated_only": "block 39685415: 0x0 -> MessageInbox proxy (6 blocks after deploy)",
+    "Upgraded_events_total": 1,
+    "Upgraded_only": "block 39685413: impl set to current 0xcf69 (constructor); never upgraded since",
+    "deposits_processed_nonce": 462,
+    "premine": "none (inbox was address(0) until the single rewiring to MessageInbox; proxy never upgraded)"
+  }
+}

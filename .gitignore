@@ -1,0 +1,6 @@
+# Working directory — intermediate fetch/build artifacts, not part of the deliverable
+scratch/
+
+# Python
+__pycache__/
+*.pyc

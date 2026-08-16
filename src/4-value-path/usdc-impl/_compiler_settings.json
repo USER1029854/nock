@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 10000000
+    },
+    "evmVersion": "istanbul",
+    "libraries": {
+      "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-usdc-mainnet-base/contracts/util/SignatureChecker.sol": {
+        "SignatureChecker": "0x2D943E25e1859ED786AFe4AFB2B42e14EFAC691e"
+      }
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    }
+  },
+  "compiler": "v0.6.12+commit.27d51765",
+  "evmVersion": "istanbul",
+  "optimizer": "1",
+  "runs": "10000000"
+}
